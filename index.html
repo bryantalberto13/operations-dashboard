@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operations Dashboard</title>
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+  <div class="nav-menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#" onclick="showPage('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="showPage('locations')">Locations</a></li>
+      <li><a href="#" onclick="showPage('positions')">Positions</a></li>
+      <li><a href="#" onclick="showPage('team')">Team Members</a></li>
+      <li><a href="#" onclick="showPage('hours')">Operating Hours</a></li>
+      <li><a href="#" onclick="showPage('settings')">Settings</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div id="dashboard" class="page">Dashboard content here</div>
+    <div id="locations" class="page" style="display:none;">Locations table here</div>
+    <div id="positions" class="page" style="display:none;">Positions table here</div>
+    <div id="team" class="page" style="display:none;">Team Members info here</div>
+    <div id="hours" class="page" style="display:none;">
+      <h3>Operating Hours</h3>
+      <table id="hours-table" border="1">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Operating Start</th>
+            <th>Operating End</th>
+            <th>Total Hours</th>
+            <th>Shift Start</th>
+            <th>Shift End</th>
+            <th>Total Shift Hours</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button class="button" onclick="exportExcel()">Export Excel (not functional)</button>
+    </div>
+    <div id="settings" class="page" style="display:none;">Settings content here</div>
+  </div>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
